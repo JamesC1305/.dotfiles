@@ -7,7 +7,8 @@ return {
 		opts = function(_, opts)
 			table.insert(opts.sources, {
 				{ name = "emoji" },
-				{ name = "git" },
+				{ name = "nvim_lsp" },
+				{ name = "luasnip" },
 			})
 		end,
 	},
