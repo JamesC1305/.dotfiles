@@ -9,15 +9,7 @@ return {
         "<leader>pf",
         function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
         desc = "Find Plugin File",
-        
       },
-			{
-				"<C-p>",
-				function()
-					require("telescope.builtin").git_files({})
-				end,
-				desc = "Git Files",
-			},
 			{
 				"<leader>ps",
 				function()
