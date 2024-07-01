@@ -8,7 +8,19 @@ return {
 			servers = {
 				-- tsserver will be automatically installed with mason and loaded with lspconfig
 				--tsserver = {},
-				pyright = {},
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							workspace = {
+								symbol = {
+									search = {
+										limit = 2048,
+									},
+								},
+							},
+						},
+					},
+				},
 			},
 			keys = {
 				{

@@ -17,6 +17,27 @@ return {
 				end,
 				desc = "Grep Search",
 			},
+			{
+				"<leader>pc",
+				function()
+					require("telescope.builtin").lsp_workspace_symbols({})
+				end,
+				desc = "Code symbol search",
+			},
+			{
+				"<leader>pr",
+				function()
+					require("telescope.builtin").lsp_references({})
+				end,
+				desc = "Symbol references",
+			},
+			{
+				"<leader>pt",
+				function()
+					require("telescope.builtin").treesitter()
+				end,
+				desc = "Treesitter",
+			},
 		},
 		-- change some options
 		opts = {
