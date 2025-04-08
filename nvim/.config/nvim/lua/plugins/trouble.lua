@@ -7,5 +7,5 @@ return {
 	},
 
 	-- disable trouble
-	{ "folke/trouble.nvim", enabled = true },
+	{ "folke/trouble.nvim", enabled = false },
 }
