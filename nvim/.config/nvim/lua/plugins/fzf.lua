@@ -20,14 +20,14 @@ return {
 				end,
 				desc = "Grep Search",
 			},
-			-- Code symbol search
-			{
-				"<leader>pc",
-				function()
-					require("fzf-lua").lsp_symbols()
-				end,
-				desc = "Code Symbol Search",
-			},
+			-- Code symbol search (defined in synbols-outline.lua)
+			-- {
+			-- 	"<leader>pc",
+			-- 	function()
+			-- 		require("fzf-lua").lsp_symbols()
+			-- 	end,
+			-- 	desc = "Code Symbol Search",
+			-- },
 			-- Symbol references
 			{
 				"<leader>pr",

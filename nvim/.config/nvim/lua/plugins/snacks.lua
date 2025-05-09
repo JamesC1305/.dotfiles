@@ -68,6 +68,7 @@ return {
 				{ section = "startup" },
 			},
 		},
+		explorer = { enabled = false },
 		-- explorer = {
 		-- 	enabled = true,
 		-- 	supports_live = true,
