@@ -1,9 +1,9 @@
 [submodule "nvim"]
 	path = nvim
-	url = git@github.com:JamesC1305/nvim.git
+	url = ../nvim.git
 [submodule "tmux"]
 	path = tmux
-	url = git@github.com:JamesC1305/tmux.git
+	url = ../tmux.git
 [submodule "ghostty"]
 	path = ghostty
-	url = git@github.com:JamesC1305/ghostty.git
+	url = ../ghostty.git
