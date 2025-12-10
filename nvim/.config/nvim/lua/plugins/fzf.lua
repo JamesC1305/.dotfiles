@@ -15,20 +15,26 @@ return {
 			{
 				"<leader>ps",
 				function()
-					local search = vim.fn.input("Grep > ")
-					require("fzf-lua").grep({ search = search })
+					require("fzf-lua").live_grep()
 				end,
 				desc = "Grep Search",
 			},
 			-- Code symbol search (defined in synbols-outline.lua)
-			-- {
-			-- 	"<leader>pc",
-			-- 	function()
-			-- 		require("fzf-lua").lsp_symbols()
-			-- 	end,
-			-- 	desc = "Code Symbol Search",
-			-- },
+			{
+				"<leader>pw",
+				function()
+					require("fzf-lua").lsp_live_workspace_symbols()
+				end,
+				desc = "Workspace Search",
+			},
 			-- Symbol references
+			{
+				"<leader>pg",
+				function()
+					require("fzf-lua").git_files()
+				end,
+				desc = "Git files",
+			},
 			{
 				"<leader>pr",
 				function()
