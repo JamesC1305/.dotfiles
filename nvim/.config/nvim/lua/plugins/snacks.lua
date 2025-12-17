@@ -68,20 +68,19 @@ return {
 				{ section = "startup" },
 			},
 		},
-		explorer = { enabled = false },
-		-- explorer = {
-		-- 	enabled = true,
-		-- 	supports_live = true,
-		-- 	tree = true,
-		-- 	watch = true,
-		-- 	diagnostics = true,
-		-- 	diagnostics_open = false,
-		-- 	git_status = true,
-		-- 	git_status_open = false,
-		-- 	git_untracked = true,
-		-- 	follow_file = true,
-		-- 	focus = "list",
-		-- },
+		explorer = {
+			enabled = true,
+			supports_live = true,
+			tree = true,
+			watch = true,
+			diagnostics = true,
+			diagnostics_open = false,
+			git_status = true,
+			git_status_open = false,
+			git_untracked = true,
+			follow_file = true,
+			focus = "list",
+		},
 		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = { enabled = true },
@@ -93,13 +92,13 @@ return {
 		toggle = { map = LazyVim.safe_keymap_set },
 		words = { enabled = true },
 	},
-	-- keys = {
-	-- 	{
-	-- 		"<leader>e",
-	-- 		function()
-	-- 			Snacks.picker.explorer({ watch = true })
-	-- 		end,
-	-- 		desc = "File Explorer",
-	-- 	},
-	-- },
+	keys = {
+		{
+			"<leader>e",
+			function()
+				Snacks.picker.explorer({ watch = true })
+			end,
+			desc = "File Explorer",
+		},
+	},
 }
