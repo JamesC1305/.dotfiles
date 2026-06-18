@@ -33,3 +33,6 @@ vim.g.clipboard = {
 
 -- Make plain yanks (y, yy, dd, etc.) go to the system clipboard.
 vim.opt.clipboard = "unnamedplus"
+
+-- Allow trusted project-local config such as Firecracker's .nvim.lua.
+vim.opt.exrc = true
