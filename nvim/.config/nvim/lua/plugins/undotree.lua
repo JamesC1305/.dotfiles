@@ -9,7 +9,7 @@ return {
 			desc = "Toggle Undotree",
 		},
 	},
-	config = function()
+	init = function()
 		vim.g.undotree_WindowLayout = 4
 	end,
 }
