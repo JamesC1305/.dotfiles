@@ -11,9 +11,11 @@ vim.api.nvim_create_autocmd("User", {
 			vim.fn.system(string.format("git -C %s config user.name 'James Curtis'", config_dir))
 			vim.fn.system(string.format("git -C %s config user.email 'jamescurtis2003@live.co.uk'", config_dir))
 
-			-- Add and commit
-			vim.fn.system(string.format("git -C %s add lazy-lock.json", config_dir))
-			vim.fn.system(string.format("git -C %s commit -m 'chore: update lazy-lock.json'", config_dir))
+			-- Commit only the lockfile. The dotfiles repository holds other
+			-- packages, and a bare commit would take whatever else is staged.
+			vim.fn.system(
+				string.format("git -C %s commit -m 'nvim: update lazy-lock.json' -- lazy-lock.json", config_dir)
+			)
 		end
 	end,
 })
