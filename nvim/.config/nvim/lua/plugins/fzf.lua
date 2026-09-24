@@ -1,5 +1,6 @@
 return {
-	-- fzf-lua configuration for file and symbol search
+	-- fzf-lua is LazyVim's active picker here (editor.fzf extra, selected via
+	-- vim.g.lazyvim_picker in options.lua). These are extra bindings on top.
 	{
 		"ibhagwan/fzf-lua",
 		keys = {
@@ -19,7 +20,7 @@ return {
 				end,
 				desc = "Grep Search",
 			},
-			-- Code symbol search (defined in synbols-outline.lua)
+			-- Code symbol search
 			{
 				"<leader>pw",
 				function()
@@ -27,7 +28,6 @@ return {
 				end,
 				desc = "Workspace Search",
 			},
-			-- Symbol references
 			{
 				"<leader>pg",
 				function()
@@ -35,6 +35,7 @@ return {
 				end,
 				desc = "Git files",
 			},
+			-- Symbol references
 			{
 				"<leader>pr",
 				function()
@@ -67,12 +68,10 @@ return {
 		},
 	},
 
-	-- Ensure you have the necessary fzf dependencies
+	-- Provides the fzf binary (not installed system-wide); fzf-lua falls back to
+	-- fzf#exec() from this plugin when `fzf` is not on $PATH.
 	{
 		"junegunn/fzf",
-		run = "./install --all", -- for fzf to work, you need to install it
-		config = function()
-			-- No extra config required for fzf-lua itself
-		end,
+		build = "./install --bin",
 	},
 }
