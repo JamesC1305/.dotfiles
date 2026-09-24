@@ -1,13 +1,10 @@
 return {
-	-- add any tools you want to have installed below
+	-- LazyVim already installs stylua and shfmt; only list additions.
 	{
 		"mason-org/mason.nvim",
 		opts = {
 			ensure_installed = {
-				"stylua",
 				"shellcheck",
-				"shfmt",
-				"flake8",
 			},
 		},
 	},
