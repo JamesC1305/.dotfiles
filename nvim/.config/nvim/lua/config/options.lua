@@ -42,3 +42,6 @@ vim.opt.exrc = true
 -- neo-tree explorer). Pin them so an upgrade cannot silently swap them.
 vim.g.lazyvim_picker = "fzf"
 vim.g.lazyvim_explorer = "snacks"
+
+-- lang.python: basedpyright instead of pyright for type checking.
+vim.g.lazyvim_python_lsp = "basedpyright"
