@@ -92,6 +92,8 @@ return {
 		toggle = { map = LazyVim.safe_keymap_set },
 		words = { enabled = true },
 	},
+	-- GitHub pickers: the snacks_picker extra would define these, but the active
+	-- picker is fzf-lua, so they are wired here.
 	keys = {
 		{
 			"<leader>e",
@@ -99,6 +101,34 @@ return {
 				Snacks.picker.explorer({ watch = true })
 			end,
 			desc = "File Explorer",
+		},
+		{
+			"<leader>gi",
+			function()
+				Snacks.picker.gh_issue()
+			end,
+			desc = "GitHub Issues (open)",
+		},
+		{
+			"<leader>gI",
+			function()
+				Snacks.picker.gh_issue({ state = "all" })
+			end,
+			desc = "GitHub Issues (all)",
+		},
+		{
+			"<leader>gp",
+			function()
+				Snacks.picker.gh_pr()
+			end,
+			desc = "GitHub Pull Requests (open)",
+		},
+		{
+			"<leader>gP",
+			function()
+				Snacks.picker.gh_pr({ state = "all" })
+			end,
+			desc = "GitHub Pull Requests (all)",
 		},
 	},
 }
