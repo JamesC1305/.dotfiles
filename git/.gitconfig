@@ -1,0 +1,18 @@
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+	editor = nvim
+[push]
+	default = simple
+[alias]
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[merge]
+	conflictStyle = diff3
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+# Identity and signing live outside this public repository. A missing
+# file is ignored, so this config also works on its own.
+[include]
+	path = ~/.gitconfig.local
