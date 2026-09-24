@@ -9,7 +9,6 @@ a stow package; its contents mirror `$HOME`.
 | `tmux`    | `~/.tmux.conf`         | Prefix `C-a`, OSC 52 clipboard |
 | `ghostty` | `~/.config/ghostty`    | Kanagawa themes |
 | `lazygit` | `~/.config/lazygit`    | |
-| `mise`    | `~/.config/mise`       | Global tool versions |
 | `tuicr`   | `~/.config/tuicr`      | |
 | `git`     | `~/.gitconfig`         | No identity; see below |
 
@@ -19,7 +18,7 @@ a stow package; its contents mirror `$HOME`.
 git clone https://github.com/JamesC1305/.dotfiles ~/.dotfiles
 mkdir -p ~/.config
 cd ~/.dotfiles
-stow nvim tmux lazygit mise tuicr git   # add ghostty where it is installed
+stow nvim tmux lazygit tuicr git   # add ghostty where it is installed
 ```
 
 Stow targets the parent of the directory it runs in, so the repository
