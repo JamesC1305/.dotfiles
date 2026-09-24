@@ -1,6 +1,3 @@
 [submodule "nvim"]
 	path = nvim
 	url = ../nvim.git
-[submodule "ghostty"]
-	path = ghostty
-	url = ../ghostty.git
