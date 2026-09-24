@@ -36,3 +36,9 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Allow trusted project-local config such as Firecracker's .nvim.lua.
 vim.opt.exrc = true
+
+-- Picker/explorer selection. Without these, LazyVim falls back to defaults that
+-- depend on `install_version` in lazyvim.json (currently 7 => fzf picker,
+-- neo-tree explorer). Pin them so an upgrade cannot silently swap them.
+vim.g.lazyvim_picker = "fzf"
+vim.g.lazyvim_explorer = "snacks"

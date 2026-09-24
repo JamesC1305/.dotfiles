@@ -1,13 +1,7 @@
 return {
 	"folke/snacks.nvim",
-	priority = 1000,
-	lazy = false,
 	---@type snacks.Config
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-		bigfile = { enabled = true },
 		dashboard = {
 			width = 80,
 			sections = {
@@ -68,40 +62,13 @@ return {
 				{ section = "startup" },
 			},
 		},
-		explorer = {
-			enabled = true,
-			supports_live = true,
-			tree = true,
-			watch = true,
-			diagnostics = true,
-			diagnostics_open = false,
-			git_status = true,
-			git_status_open = false,
-			git_untracked = true,
-			follow_file = true,
-			focus = "list",
-		},
-		indent = { enabled = true },
-		input = { enabled = true },
-		notifier = { enabled = true },
-		-- picker = { enabled = true },
-		quickfile = { enabled = true },
-		scope = { enabled = true },
+		-- Everything else (bigfile, notifier, quickfile, indent, input, scope,
+		-- words, statuscolumn, explorer) is LazyVim's default; only list what differs.
 		scroll = { enabled = false },
-		statuscolumn = { enabled = false }, -- we set this in options.lua
-		toggle = { map = LazyVim.safe_keymap_set },
-		words = { enabled = true },
 	},
 	-- GitHub pickers: the snacks_picker extra would define these, but the active
 	-- picker is fzf-lua, so they are wired here.
 	keys = {
-		{
-			"<leader>e",
-			function()
-				Snacks.picker.explorer({ watch = true })
-			end,
-			desc = "File Explorer",
-		},
 		{
 			"<leader>gi",
 			function()
