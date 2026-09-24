@@ -1,0 +1,6 @@
+theme = "tokyo-night-storm"
+appearance = "system"
+mouse = true
+leader = " "                # configurable prefix for leader shortcuts
+comment_vim = false         # vim modal editing in the review comment box
+editor = "nvim"
