@@ -1,0 +1,5 @@
+git:
+  overrideGpg: false
+update:
+  method: prompt
+  days: 1
